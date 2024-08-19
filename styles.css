@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap');
+
+/* Main styling */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 60px;
+    background-color: #1f1f1f !important;
+    color: rgb(213, 212, 212) !important;
+    font-family: "Rubik", sans-serif !important;
+    overflow-x: hidden;
+}
+
+/* Loading Screen styling */
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1500;
+    background-color: #1f1f1f;
+}
+
+.loader-icon {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.break-animation {
+    animation: break 1s forwards;
+}
+
+#loading-icon {
+    width: 250px;
+    height: 200px;
+}
+
+
+
+@keyframes break {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+/* Navigation Bar styling */
+#nav-bar-icon {
+    width: 80px;
+    height: 45px;
+}
+
+
+.navbar-brand {
+    font-size: 24px;
+    padding-left: 30px;
+    color: #e0e0e0 !important;
+    font-family: "Russo One", sans-serif;
+}
+
+.nav-link {
+    padding: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navbar-nav {
+    padding-left: 100px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #a53bab !important;
+}
+
+
+.nav-item {
+    margin-right: 30px;
+}
+
+
+.navbar-custom {
+    background-color: #252525;
+    border-bottom: 5px solid rgb(84, 84, 84);
+}
+
+.navbar-nav .nav-link {
+    color: #e0e0e0 !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url('img/hamburger.svg') !important;
+    background-color: transparent;
+}
+
+
+
+/* All sections common styling */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    margin-bottom: 150px;
+}
+
+p {
+    font-size: large;
+}
+
+.section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+
+/* Home Page section styling */
+.social-icon {
+    display: inline-block;
+    font-size: 30px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.5);
+}
+
+
+.company-name {
+    font-family: Russo One, sans-serif;
+    font-size: 500%;
+    color: white;
+}
+
+.company-sub-text {
+    color: #e887b4;
+    font-size: 200%;
+}
+
+#description {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.home-logo {
+    width: 2000px;
+    height: 1000px;
+}
+
+
+#home {
+    margin-top: 20px;
+}
+
+
+/* about section styling */
+.about-card {
+    background-color: #252525 !important;
+    border-radius: 50px !important;
+    margin-right: 5px;
+    padding: 20px !important;
+
+}
+
+.about-title {
+    color: #a53bab;
+}
+
+
+
+/* team section styling */
+.team-card {
+    background-color: #252525 !important;
+    border-radius: 25px !important;
+    padding: 5px !important;
+    margin-bottom: 15px;
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.team-member-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 70px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.team-card-text {
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+.team-card-position {
+    color: #6b8bd1;
+}
+
+
+.team-card-position-dev {
+    color: #c398c5;
+}
+
+/*project section styling */
+.project-title {
+    color: #a53bab;
+}
+
+.project-card {
+    background-color: #252525 !important;
+    border-radius: 50px !important;
+    margin-right: 5px;
+    padding: 20px !important;
+}
+
+.project-status {
+    background-color: rgb(104, 5, 5);
+    color: rgb(191, 185, 185);
+    border-radius: 30px;
+    width: 200px;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.project-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+}
+
+
+/*contact section styling */
+.contact-title {
+    color: #a53bab;
+}
+
+.contact-form-title {
+    color: #e2dcdc;
+}
+
+.contact-card {
+    background-color: #252525 !important;
+    border-radius: 50px !important;
+    margin-right: 5px;
+    padding: 30px !important;
+}
+
+.contact-form {
+    background-color: #832488 !important;
+    border-radius: 50px !important;
+    margin-right: 5px;
+    padding: 20px !important;
+}
+
+input[type="text"] {
+    background-color: #e2dcdc;
+    border: none;
+    border-radius: 40px;
+    height: 50px;
+    width: 320px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+textarea {
+    background-color: #e2dcdc;
+    border: none;
+    border-radius: 40px;
+    height: 200px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+}
+
+#send-btn {
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    font-family: "Rubik", sans-serif;
+    border-radius: 40px;
+    font-weight: 500;
+    background-color: #252525;
+    color: #e2dcdc;
+    border: none;
+}
+
+#send-btn:hover {
+    background-color: #505050;
+}
+
+/*Back to top button  styling */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2d4b8e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    background-color: #182f61;
+}
+
+
+/*Footer section styling */
+footer {
+    border-top: 5px solid rgb(84, 84, 84);
+    background-color: #252525;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+/*Home page text changing effect styling */
+.letter {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.letter.visible {
+    opacity: 1;
+}
+
+.text-wrapper {
+    color: #a53bab;
+    font-size: 450%;
+}
